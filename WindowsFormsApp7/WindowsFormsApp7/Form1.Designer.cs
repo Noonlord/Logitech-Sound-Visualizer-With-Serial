@@ -51,7 +51,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.labelAmp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -145,7 +149,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(422, 104);
+            this.label8.Location = new System.Drawing.Point(422, 148);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 17);
             this.label8.TabIndex = 9;
@@ -155,7 +159,7 @@
             // notSmooth
             // 
             this.notSmooth.AutoSize = true;
-            this.notSmooth.Location = new System.Drawing.Point(527, 104);
+            this.notSmooth.Location = new System.Drawing.Point(527, 148);
             this.notSmooth.Name = "notSmooth";
             this.notSmooth.Size = new System.Drawing.Size(36, 17);
             this.notSmooth.TabIndex = 10;
@@ -173,7 +177,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(257, 104);
+            this.label9.Location = new System.Drawing.Point(257, 148);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 17);
             this.label9.TabIndex = 12;
@@ -182,7 +186,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 104);
+            this.label11.Location = new System.Drawing.Point(12, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 17);
             this.label11.TabIndex = 14;
@@ -191,7 +195,7 @@
             // OldPeakMultiplier
             // 
             this.OldPeakMultiplier.AutoSize = true;
-            this.OldPeakMultiplier.Location = new System.Drawing.Point(148, 104);
+            this.OldPeakMultiplier.Location = new System.Drawing.Point(148, 148);
             this.OldPeakMultiplier.Name = "OldPeakMultiplier";
             this.OldPeakMultiplier.Size = new System.Drawing.Size(0, 17);
             this.OldPeakMultiplier.TabIndex = 15;
@@ -199,7 +203,7 @@
             // NewPeakMultiplier
             // 
             this.NewPeakMultiplier.AutoSize = true;
-            this.NewPeakMultiplier.Location = new System.Drawing.Point(361, 104);
+            this.NewPeakMultiplier.Location = new System.Drawing.Point(361, 148);
             this.NewPeakMultiplier.Name = "NewPeakMultiplier";
             this.NewPeakMultiplier.Size = new System.Drawing.Size(0, 17);
             this.NewPeakMultiplier.TabIndex = 16;
@@ -215,7 +219,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 53);
+            this.label12.Location = new System.Drawing.Point(12, 50);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 17);
             this.label12.TabIndex = 18;
@@ -231,11 +235,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(25, 101);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 17);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Amplifier:";
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(97, 89);
+            this.trackBar2.Maximum = 100;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(349, 56);
+            this.trackBar2.TabIndex = 21;
+            this.trackBar2.Value = 1;
+            // 
+            // labelAmp
+            // 
+            this.labelAmp.AutoSize = true;
+            this.labelAmp.Location = new System.Drawing.Point(440, 100);
+            this.labelAmp.Name = "labelAmp";
+            this.labelAmp.Size = new System.Drawing.Size(0, 17);
+            this.labelAmp.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 127);
+            this.ClientSize = new System.Drawing.Size(690, 174);
+            this.Controls.Add(this.labelAmp);
+            this.Controls.Add(this.trackBar2);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
@@ -257,6 +290,7 @@
             this.Name = "Form1";
             this.Text = "Logitech RGB Visualizer";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +319,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.Label labelAmp;
     }
 }
 

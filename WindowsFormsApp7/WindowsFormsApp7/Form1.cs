@@ -32,11 +32,19 @@ namespace WindowsFormsApp7
             if (comboBox1.SelectedItem != null)
             {               var device = (NAudio.CoreAudioApi.MMDevice) comboBox1.SelectedItem;
                 double smoothingMultiplier;
+                double amplifierMultiplier;
+                amplifierMultiplier = (trackBar2.Value / 100.00) + 1.00;
                 label10.Text = trackBar1.Value.ToString();
+                labelAmp.Text = (trackBar2.Value + 100).ToString() + "%";
                 smoothingMultiplier = (double)trackBar1.Value / 100.00;
                 NewPeakMultiplier.Text = (1 - smoothingMultiplier).ToString();
                 OldPeakMultiplier.Text = smoothingMultiplier.ToString();
                 int peakVal = (int)Math.Round((device.AudioMeterInformation.MasterPeakValue * 100));
+                peakVal = (int)Math.Round(peakVal * amplifierMultiplier);
+                if (peakVal > 100)
+                {
+                    peakVal = 100;
+                }
                 notSmooth.Text = peakVal.ToString();
                 //Smoothing basically works with weighted average. 
                 peakVal = (int)Math.Round(globalVariable.oldPeak * smoothingMultiplier + peakVal * (1 - smoothingMultiplier));
